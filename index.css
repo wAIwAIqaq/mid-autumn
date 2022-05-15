@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border-bottom: 1px solid wheat;
+    background-color: transparent;
+    outline: none;
+}
+
+/* 外部字体导入 */
+@font-face {
+    font-family: "font1";
+    src: url('./fontfamily/font1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+}
+
+.cloud {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.cloud div[class^="cloud"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+}
+
+.cloud .cloud_1 {
+    background-image: url(./images/cloud_one.png);
+    animation: cloud 50s linear infinite;
+}
+
+.cloud .cloud_2 {
+    background-image: url(./images/cloud_two.png);
+    animation: cloud 60s linear infinite;
+}
+
+.cloud .cloud_3 {
+    background-image: url(./images/cloud_three.png);
+    animation: cloud 70s linear infinite;
+}
+
+
+
+.loader {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 8em;
+    height: 8em;
+    background: linear-gradient(-225deg, white 0%, #fff 52%, wheat 100%);
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: inherit;
+}
+
+span:nth-child(1) {
+    filter: blur(5px);
+}
+
+span:nth-child(2) {
+    filter: blur(10px);
+}
+
+span:nth-child(3) {
+    filter: blur(25px);
+}
+
+span:nth-child(4) {
+    filter: blur(100px);
+}
+
+
+span::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: wheat;
+    border-radius: inherit;
+
+}
+
+@keyframes cloud {
+    0% {}
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideLeft {
+    to {
+        left: -6%;
+        opacity: 1;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        right: -6%;
+        opacity: 1;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes hidden1 {
+    0% {
+        opacity: 0.5
+    }
+
+    20% {
+        width: 180px;
+        opacity: 1;
+    }
+
+    24% {
+        width: 180px;
+        opacity: 0.5
+    }
+
+    48% {
+        width: 360px;
+        opacity: 1;
+    }
+
+    50% {
+        width: 360px;
+        opacity: 0.5
+    }
+
+    76% {
+        width: 570px;
+        opacity: 1;
+    }
+
+    77% {
+        width: 570px;
+        opacity: 0.5
+    }
+
+    100% {
+        width: 780px;
+        opacity: 1;
+    }
+
+}
+
+@keyframes hidden2 {
+
+    /* 26s */
+    0% {
+        opacity: 0.5
+    }
+
+    15.625% {
+        width: 210px;
+        opacity: 1;
+    }
+
+    /* 31s */
+    /* 32s */
+    18.75% {
+        width: 210px;
+        opacity: 0.5
+    }
+
+
+    37.5% {
+        width: 420px;
+        opacity: 1;
+    }
+
+    /* 38s */
+    /* 38.5 */
+    39.0625% {
+        width: 420px;
+        opacity: 0.5
+    }
+
+    59.375% {
+        width: 600px;
+        opacity: 1;
+    }
+
+    /* 45s */
+    /* 45.5s */
+    60% {
+        width: 600px;
+        opacity: 0.5
+    }
+
+    78.125% {
+        width: 780px;
+        opacity: 1;
+    }
+
+    /* 51s */
+    /* 52s */
+    81.25% {
+        width: 780px;
+        opacity: 0.5
+    }
+
+    100% {
+        width: 990px;
+        opacity: 1;
+    }
+
+    /* 58 */
+}
+
+@keyframes hidden3 {
+
+    /* 58 s*/
+    0% {
+        opacity: 0.5
+    }
+
+    13.4% {
+        width: 120px;
+        opacity: 1;
+    }
+
+    /* 61.5 */
+    /* 62s */
+    15.3% {
+        width: 120px;
+        opacity: 0.5
+    }
+
+    23% {
+        width: 240px;
+        opacity: 1;
+    }
+
+    /* 64 */
+    /* 64.5s */
+    25% {
+        width: 240px;
+        opacity: 0.5
+    }
+
+    50% {
+        width: 360px;
+        opacity: 1;
+    }
+
+    /* 71 */
+    /* 72 */
+    53.8% {
+        width: 360px;
+        opacity: 0.5
+    }
+
+    65.4% {
+        width: 510px;
+        opacity: 1;
+    }
+
+    /* 75 */
+    /* 75 */
+    65.5% {
+        width: 510px;
+        opacity: 0.5
+    }
+
+    100% {
+        width: 750px;
+        opacity: 1;
+    }
+
+    /* 84 */
+}
+
+@keyframes hidden4 {
+
+    /* 84s */
+    0% {
+        opacity: 0.5
+    }
+
+    18.2% {
+        width: 210px;
+        opacity: 1;
+    }
+
+    /* 90s */
+    /* 92 */
+    24.2% {
+        width: 210px;
+        opacity: 0.5
+    }
+
+    39.4% {
+        width: 420px;
+        opacity: 1;
+    }
+
+    /* 97 */
+    /* 98 */
+    42.4% {
+        width: 420px;
+        opacity: 0.5
+    }
+
+    60.6% {
+        width: 600px;
+        opacity: 1;
+    }
+
+    /* 104 */
+    /* 104.5s */
+    62.1% {
+        width: 600px;
+        opacity: 0.5
+    }
+
+    75.75% {
+        width: 780px;
+        opacity: 1;
+    }
+
+    /* 109 */
+    /* 110 */
+    78.78% {
+        width: 780px;
+        opacity: 0.5
+    }
+
+    100% {
+        width: 960px;
+        opacity: 1;
+    }
+
+    /* 117s */
+}
+
+@keyframes darkmoon {
+    0% {}
+
+    45% {
+        transform: translate(0, 0);
+    }
+
+    55% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(9em, 0);
+    }
+}
+
+.darkmoon {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.darkmoon .dark {
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: 0 0 12px #222;
+    transform: translate(-9em, 0);
+    animation: darkmoon linear 14s 84s forwards;
+}
+
+.verse {
+    position: absolute;
+    top: 40%;
+    right:1000px;
+    font-family: 'font1';
+    color: wheat;
+    font-size: 30px;
+}
+
+.verse p {
+    position: absolute;
+    float: left;
+    display: block;
+    left: 0;
+    width: 0;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+
+.verse .h1 {
+    top: 80px;
+    width: 900px;
+}
+
+.verse .h2 {
+    top: 120px;
+    animation: hidden1 linear 25s forwards;
+}
+
+.verse .h3 {
+    top: 155px;
+    animation: hidden2 linear 33s 26s forwards;
+}
+
+.verse .h4 {
+    top: 190px;
+    animation: hidden3 linear 26s 58s forwards;
+}
+
+.verse .h5 {
+    top: 225px;
+    animation: hidden4 linear 33s 84s forwards;
+}
+
+audio {
+    position: absolute;
+    bottom:100px;
+}
